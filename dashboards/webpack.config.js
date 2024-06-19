@@ -10,6 +10,15 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    externals: [
+      "@clearblade/ia-mfe-core",
+      "@clearblade/ia-mfe-react",
+      "react-query",
+      "@material-ui/core",
+      "@material-ui/icons",
+      "@material-ui/lab",
+      "react-router-dom",
+      "single-spa",
+    ],
   });
 };

@@ -3,8 +3,8 @@ import { TrackStatusCustomViewSettings } from "./types";
 // ADDRSS THIS LATER BY UPDATING UTILS PACKAGE
 // @ts-ignore
 import { Asset, Area } from "@clearblade/ia-mfe-core";
-import { getColorForAttributeValue } from "./uilts/getColorForAttributeValue";
-import { defaultAttributeColor } from "./constants";
+import { getColorForTrackStatusAttributeValue } from "./utils/getColorForTrackStatusAttributeValue";
+import { trackStatusDefaultAttributeColor } from "./constants";
 
 export default function TrackStatus(props: {
   settings: TrackStatusCustomViewSettings;
@@ -16,15 +16,15 @@ export default function TrackStatus(props: {
   const { approach, island } = props.settings;
   const approachVal = approach ? entity.customData?.[approach.attribute] : "";
   const islandVal = island ? entity.customData?.[island.attribute] : "";
-  const approachColor = getColorForAttributeValue(
+  const approachColor = getColorForTrackStatusAttributeValue(
     approach,
     approachVal,
-    defaultAttributeColor
+    trackStatusDefaultAttributeColor
   );
-  const islandColor = getColorForAttributeValue(
+  const islandColor = getColorForTrackStatusAttributeValue(
     island,
     islandVal,
-    defaultAttributeColor
+    trackStatusDefaultAttributeColor
   );
 
   return (

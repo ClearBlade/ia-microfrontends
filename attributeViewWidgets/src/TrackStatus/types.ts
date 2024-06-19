@@ -3,7 +3,7 @@ export enum TrackStatusSettingKeys {
   island = "island",
 }
 
-export type AttributeProp = {
+export type TrackStatusAttributeProp = {
   attribute: string;
   color: {
     on: string;
@@ -12,6 +12,6 @@ export type AttributeProp = {
 };
 
 export type TrackStatusCustomViewSettings = {
-  [TrackStatusSettingKeys.approach]: AttributeProp;
-  [TrackStatusSettingKeys.island]: AttributeProp;
+  [TrackStatusSettingKeys.approach]: TrackStatusAttributeProp;
+  [TrackStatusSettingKeys.island]: TrackStatusAttributeProp;
 };

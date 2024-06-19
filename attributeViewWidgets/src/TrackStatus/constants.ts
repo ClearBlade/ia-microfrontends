@@ -1,1 +1,4 @@
-export const defaultAttributeColor = { on: "#008000", off: "#FF0000" };
+export const trackStatusDefaultAttributeColor = {
+  on: "#008000",
+  off: "#FF0000",
+};

@@ -1,3 +1,13 @@
+import { Subscribe } from "@react-rxjs/core";
+import { AppProviders } from "@clearblade/ia-mfe-react";
+import TrackStatus from "./TrackStatus";
+
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return (
+    <AppProviders>
+      <Subscribe>
+        <TrackStatus {...props} />
+      </Subscribe>
+    </AppProviders>
+  );
 }

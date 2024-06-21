@@ -16,11 +16,11 @@ module.exports = (webpackConfigEnv, argv) => {
       path: path.resolve(__dirname, "dist"),
     },
     entry: {
-      gateStatus: path.resolve(
+      attributeViewWidgets_GateStatus: path.resolve(
         __dirname,
         "src/attributeViewWidgets/GateStatus/index.tsx"
       ),
-      trackStatus: path.resolve(
+      attributeViewWidgets_TrackStatus: path.resolve(
         __dirname,
         "src/attributeViewWidgets/TrackStatus/index.tsx"
       ),

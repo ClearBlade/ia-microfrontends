@@ -4,8 +4,6 @@ import {
   useStateObservable,
 } from "@react-rxjs/core";
 import { TrackStatusCustomViewSettings } from "./types";
-// ADDRSS THIS LATER BY UPDATING UTILS PACKAGE
-// @ts-ignore
 import { Area, Asset } from "@clearblade/ia-mfe-core";
 import { AppProviders } from "@clearblade/ia-mfe-react";
 import { trackStatusDefaultAttributeColor } from "./constants";

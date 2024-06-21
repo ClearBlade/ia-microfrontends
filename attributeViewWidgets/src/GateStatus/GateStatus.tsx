@@ -1,6 +1,4 @@
 import { StateObservable, useStateObservable } from "@react-rxjs/core";
-// ADDRSS THIS LATER BY UPDATING UTILS PACKAGE
-// @ts-ignore
 import { Area, Asset } from "@clearblade/ia-mfe-core";
 import { Grid } from "@material-ui/core";
 import { GateStatusCustomViewSettings } from "./types";

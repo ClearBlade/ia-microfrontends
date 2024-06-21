@@ -17,7 +17,7 @@ Each directory in the root/src of this repository represents a category of mfes,
 ### How to use one of these microfrontends
 
 - If you'd like to use an existing mfe, you only need to provide a url within the IA app that points to the released mfe.
-- Urls are in the format of: `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@RELEASE_VERSION/CATEGORY/dist/MFE_NAME.js` (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.3/dist/attributeViewWidgets/gateStatus.js`)
+- Urls are in the format of: `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@RELEASE_VERSION/CATEGORY/dist/MFE_NAME.js` (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.3/dist/gateStatus.js`)
 
 ### Adding a new category
 
@@ -36,7 +36,7 @@ Each directory in the root/src of this repository represents a category of mfes,
    - `npm run build:webpack` from the root of the repository. This will create a dist folder of built code.
    - Commit and push the changes to the dist
    - Create a new release on Github
-   - Using [jsDelivr](https://www.jsdelivr.com/?docs=gh) create a link to your mfe using the tag of the latest release you just created (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.3/dist/attributeViewWidgets/gateStatus.js`).
+   - Using [jsDelivr](https://www.jsdelivr.com/?docs=gh) create a link to your mfe using the tag of the latest release you just created (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.3/dist/gateStatus.js`).
 
 ### Additional documentation
 

@@ -17,7 +17,7 @@ Each directory in the root/src of this repository represents a category of mfes,
 ### How to use one of these microfrontends
 
 - If you'd like to use an existing mfe, you only need to provide a url within the IA app that points to the released mfe.
-- Urls are in the format of: `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@RELEASE_VERSION/CATEGORY/dist/MFE_NAME.js` (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.1/dist/gateStatus.js`)
+- Urls are in the format of: `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@RELEASE_VERSION/CATEGORY/dist/MFE_ENTRY_NAME.js` (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.1/dist/gateStatus.js`).
 
 ### Adding a new category
 
@@ -27,17 +27,17 @@ Each directory in the root/src of this repository represents a category of mfes,
 ### Adding a new mfe to a category
 
 1. Create a new directory within the category directory (e.g. src/attributeViewWidgets/GateStatus/)
-2. Add a new entry point to the webpack.config.js, pointing to your entry file. See other entry files regarding usage of singleSpaReact to understand how to set up your file.
+2. Add a new entry point to the webpack.config.js, pointing to your entry file. See other entry files regarding usage of `singleSpaReact` to understand how to set up your file.
 3. Local development:
    - `npm run start` from the root the repository. This will run all entry points in the webpack.config.js.
-   - You should be able to point to your individual mfe entry point url with this format: //localhost:8081/gateStatus.js
-   - Develop the UI you would like to render
+   - You should be able to point to your individual mfe entry point url with this format: `//localhost:8081/gateStatus.js`.
+   - Develop the UI you would like to render.
 4. Publishing for production:
    - `npm run build:webpack` from the root of the repository. This will create a dist folder of built code.
-   - Commit and push the changes to the dist
-   - Create a new release on Github
+   - Commit and push the changes to the dist.
+   - Create a new release on Github, using semver to indicate major, minor, and patch updates.
    - Using [jsDelivr](https://www.jsdelivr.com/?docs=gh) create a link to your mfe using the tag of the latest release you just created (e.g. `https://cdn.jsdelivr.net/gh/ClearBlade/ia-microfrontends@0.0.1/dist/gateStatus.js`).
 
 ### Additional documentation
 
-- For additional documentation and tips on developing your mfe see [here] (https://clearblade.atlassian.net/wiki/spaces/AS/pages/2808315938/Microfrontend+Types+and+Props)
+- For additional documentation and tips on developing your mfe see [here] (https://docs.clearblade.com/ia/microfrontend-types-and-props)

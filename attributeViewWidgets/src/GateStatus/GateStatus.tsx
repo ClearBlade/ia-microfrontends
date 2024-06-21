@@ -14,13 +14,13 @@ export default function GateStatus(props: {
   const entity = useStateObservable(props.entity);
   const { gateUp, gateDown, bellStatus, gateControl, flip } = props.settings;
 
-  const gateUpVal = gateUp ? entity.customData?.[gateUp.attribute] : "";
-  const gateDownVal = gateDown ? entity.customData?.[gateDown.attribute] : "";
+  const gateUpVal = gateUp ? entity.custom_data?.[gateUp.attribute] : "";
+  const gateDownVal = gateDown ? entity.custom_data?.[gateDown.attribute] : "";
   const bellStatusVal = bellStatus
-    ? entity.customData?.[bellStatus.attribute]
+    ? entity.custom_data?.[bellStatus.attribute]
     : "";
   const gateControlVal = gateControl
-    ? entity.customData?.[gateControl.attribute]
+    ? entity.custom_data?.[gateControl.attribute]
     : "";
   const gateUpColor = getColorForGateStatusAttributeValue(gateUp, gateUpVal);
   const gateDownColor = getColorForGateStatusAttributeValue(

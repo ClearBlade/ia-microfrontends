@@ -1,3 +1,4 @@
+const path = require("path");
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 
@@ -10,6 +11,14 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
+    output: {
+      filename: "[name].js",
+      path: path.resolve(__dirname, "dist"),
+    },
+    entry: {
+      gateStatus: path.resolve(__dirname, "src/GateStatus/entry.tsx"),
+      trackStatus: path.resolve(__dirname, "src/TrackStatus/entry.tsx"),
+    },
     externals: [
       "@clearblade/ia-mfe-core",
       "@clearblade/ia-mfe-react",

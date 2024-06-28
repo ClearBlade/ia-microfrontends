@@ -12,13 +12,15 @@ import { getColorForTrackStatusAttributeValue } from "./utils/getColorForTrackSt
 export default function TrackStatusWidget(props: {
   settings: TrackStatusCustomViewSettings;
   attribute: StateObservable<string | number | boolean | null | undefined>;
-  entity: StateObservable<Asset["frontend"] | Area["frontend"]>;
+  entity: StateObservable<Asset["frontend"] | Area["frontend"] | undefined>;
 }) {
   const entity = useStateObservable(props.entity);
 
   const { approach, island } = props.settings;
-  const approachVal = approach ? entity.custom_data?.[approach.attribute] : "";
-  const islandVal = island ? entity.custom_data?.[island.attribute] : "";
+  const approachVal = approach
+    ? entity?.custom_data?.[approach.attribute] ?? ""
+    : "";
+  const islandVal = island ? entity?.custom_data?.[island.attribute] ?? "" : "";
   const approachColor = getColorForTrackStatusAttributeValue(
     approach,
     approachVal,

@@ -7,18 +7,20 @@ import { getColorForGateStatusAttributeValue } from "./utils/getColorForGateStat
 export default function GateStatusWidget(props: {
   settings: GateStatusCustomViewSettings;
   attribute: StateObservable<string | number | boolean | null | undefined>;
-  entity: StateObservable<Asset["frontend"] | Area["frontend"]>;
+  entity: StateObservable<Asset["frontend"] | Area["frontend"] | undefined>;
 }) {
   const entity = useStateObservable(props.entity);
   const { gateUp, gateDown, bellStatus, gateControl, flip } = props.settings;
 
-  const gateUpVal = gateUp ? entity.custom_data?.[gateUp.attribute] : "";
-  const gateDownVal = gateDown ? entity.custom_data?.[gateDown.attribute] : "";
+  const gateUpVal = gateUp ? entity?.custom_data?.[gateUp.attribute] ?? "" : "";
+  const gateDownVal = gateDown
+    ? entity?.custom_data?.[gateDown.attribute] ?? ""
+    : "";
   const bellStatusVal = bellStatus
-    ? entity.custom_data?.[bellStatus.attribute]
+    ? entity?.custom_data?.[bellStatus.attribute]
     : "";
   const gateControlVal = gateControl
-    ? entity.custom_data?.[gateControl.attribute]
+    ? entity?.custom_data?.[gateControl.attribute]
     : "";
   const gateUpColor = getColorForGateStatusAttributeValue(gateUp, gateUpVal);
   const gateDownColor = getColorForGateStatusAttributeValue(

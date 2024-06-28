@@ -17,10 +17,10 @@ export default function GateStatusWidget(props: {
     ? entity?.custom_data?.[gateDown.attribute] ?? ""
     : "";
   const bellStatusVal = bellStatus
-    ? entity?.custom_data?.[bellStatus.attribute]
+    ? entity?.custom_data?.[bellStatus.attribute] ?? ""
     : "";
   const gateControlVal = gateControl
-    ? entity?.custom_data?.[gateControl.attribute]
+    ? entity?.custom_data?.[gateControl.attribute] ?? ""
     : "";
   const gateUpColor = getColorForGateStatusAttributeValue(gateUp, gateUpVal);
   const gateDownColor = getColorForGateStatusAttributeValue(

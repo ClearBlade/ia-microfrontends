@@ -114,7 +114,7 @@
       "is_invalid": false,
       "label": "{asset_type_label} Anomaly Detector",
       "priority": 2,
-      "rule_type_id": "{rule_type_id}",
+      "rule_type_id": "",
       "severity": 3,
       "timeframe": {
         "type": "",

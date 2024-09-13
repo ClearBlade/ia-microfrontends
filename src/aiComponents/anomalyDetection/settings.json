@@ -21,8 +21,8 @@
       "closed_states": [],
       "description": "Event type for anomaly detection.",
       "has_lifecycle": false,
-      "id": "{asset_type_label} Anomaly Detected",
-      "label": "{asset_type_label} Anomaly Detected",
+      "id": "Anomaly Detected",
+      "label": "Anomaly Detected",
       "open_states": [],
       "priority": 2,
       "severity": 3

@@ -6,9 +6,9 @@
       "attribute_label": "Anomaly Score"
     },
     {
-      "attribute_name": "anomaly_contribution_scores",
+      "attribute_name": "anomaly_breakdown",
       "attribute_type": "string",
-      "attribute_label": "Anomaly Contribution Scores"
+      "attribute_label": "Anomaly Breakdown"
     }
   ],
   "eventTypes": [
@@ -102,7 +102,7 @@
                 "value": 0,
                 "unit": "seconds"
               },
-              "value": 0.65
+              "value": 65
             }
           }
         ]
@@ -112,7 +112,7 @@
       "id": "",
       "is_disabled": false,
       "is_invalid": false,
-      "label": "{asset_type_label} Anomaly Detector",
+      "label": "Anomaly Detected on {asset_type_label}",
       "priority": 2,
       "rule_type_id": "",
       "severity": 3,

@@ -24,6 +24,10 @@ module.exports = (webpackConfigEnv, argv) => {
         __dirname,
         "src/attributeViewWidgets/TrackStatus/index.tsx"
       ),
+      aiComponents_AnomalyDetection: path.resolve(
+        __dirname,
+        "src/aiComponents/AnomalyDetection/index.tsx"
+      ),
     },
     externals: [
       "@clearblade/ia-mfe-core",

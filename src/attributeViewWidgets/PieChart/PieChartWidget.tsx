@@ -1,7 +1,5 @@
 import { StateObservable, useStateObservable } from "@react-rxjs/core";
 import { Grid, Typography } from "@material-ui/core";
-import { PieChartPallette } from "./types";
-import { Area, Asset } from "@clearblade/ia-mfe-core";
 import { PieChart } from "react-minimal-pie-chart";
 import { convertDataToWidgetData } from "./utils/convertDataToWidgetData";
 
@@ -9,7 +7,7 @@ export default function PieChartWidget(props: {
   attribute: StateObservable<string>;
 }) {
   const attribute = useStateObservable(props.attribute);
-  console.log("attribute: ", attribute);
+
   if (!attribute) {
     return <Typography variant="body2">{"No data"}</Typography>;
   }

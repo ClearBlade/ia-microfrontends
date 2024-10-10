@@ -93,7 +93,7 @@ export default function AnomalyDetection(props: AiComponentsProps) {
                 <Divider />
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <FormControl fullWidth margin="normal">
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <FormLabel>
@@ -126,7 +126,7 @@ export default function AnomalyDetection(props: AiComponentsProps) {
                 </FormControl>
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <FormControl fullWidth margin="normal">
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <FormLabel>

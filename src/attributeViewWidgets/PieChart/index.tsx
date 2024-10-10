@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import singleSpaReact from "single-spa-react";
 import PieChartWidget from "./PieChartWidget";
 
-function AnomalyDetectionRoot(props) {
+function PieChartRoot(props) {
   return (
     <AppProviders>
       <BrowserRouter basename={getBasePath()}>
@@ -22,7 +22,7 @@ function AnomalyDetectionRoot(props) {
 const lifecycles = singleSpaReact({
   React,
   ReactDOM,
-  rootComponent: AnomalyDetectionRoot,
+  rootComponent: PieChartRoot,
   errorBoundary(err, info, props) {
     // Customize the root error boundary for your microfrontend here.
     return null;

@@ -24,7 +24,7 @@ export default function PieChartWidget(props: {
       />
     );
   }
-
+  console.log("attribute: ", attribute);
   const data = convertDataToWidgetData(attribute);
 
   if (data.length === 0) {

@@ -9,14 +9,20 @@ const isValidDataType = (data: Record<string, any>) => {
   return true
 }
 
-export const convertDataToWidgetData = (attribute: Record<string, string>) => {
-  const data = JSON.parse(Object.values(attribute)[0]);
-  if (!isValidDataType(data)) {
+export const convertDataToWidgetData = (attribute: string) => {
+  try {
+    const jsonAttr: Record<string, any> = JSON.parse(attribute);
+    const val = Object.values(jsonAttr)[0];
+    const data = JSON.parse(val);
+    if (!isValidDataType(data)) {
+      return [];
+    }
+    return Object.keys(data).map((key, idx) => ({
+      title: key,
+      value: parseFloat(data[key]),
+      color: PieChartPallette[idx].color
+    }));
+  } catch (e) {
     return [];
   }
-  return Object.keys(data).map((key, idx) => ({
-    title: key,
-    value: parseFloat(data[key]),
-    color: PieChartPallette[idx].color
-  }))
 }

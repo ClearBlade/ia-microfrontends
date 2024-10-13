@@ -24,6 +24,10 @@ module.exports = (webpackConfigEnv, argv) => {
         __dirname,
         "src/attributeViewWidgets/TrackStatus/index.tsx"
       ),
+      attributeViewWidgets_Video: path.resolve(
+        __dirname,
+        "src/attributeViewWidgets/Video/index.tsx"
+      )
     },
     externals: [
       "@clearblade/ia-mfe-core",

@@ -8,7 +8,7 @@ export type AiComponentsProps = {
   setValues: React.Dispatch<
     React.SetStateAction<{
       schema: Record<string, unknown>[];
-      componentsMeta: Record<string, unknown>;
+      componentsMeta?: Record<string, unknown>;
     }>
   >
 };

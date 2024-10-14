@@ -20,7 +20,7 @@ function GenerateEntityInformation({
             {`Adding the ${componentLabel} component to ${assetTypeLabel} asset type will create the following: `}
           </Typography>
           <ul style={{ marginTop: 0, paddingLeft: "20px" }}>
-            {settings.attributes.length > 0 && (
+            {settings?.attributes?.length > 0 && (
               <li>
                 <span
                   style={{ fontWeight: "bold" }}
@@ -30,7 +30,7 @@ function GenerateEntityInformation({
                   .join(", ")}`}
               </li>
             )}
-            {settings.ruleTypes.length > 0 && (
+            {settings?.ruleTypes?.length > 0 && (
               <li>
                 <span
                   style={{ fontWeight: "bold" }}
@@ -46,7 +46,7 @@ function GenerateEntityInformation({
                   .join(", ")}`}
               </li>
             )}
-            {settings.rules.length > 0 && (
+            {settings?.rules?.length > 0 && (
               <li>
                 <span
                   style={{ fontWeight: "bold" }}
@@ -62,7 +62,7 @@ function GenerateEntityInformation({
                   .join(", ")}`}
               </li>
             )}
-            {settings.eventTypes.length > 0 && (
+            {settings?.eventTypes?.length > 0 && (
               <li>
                 <span
                   style={{ fontWeight: "bold" }}

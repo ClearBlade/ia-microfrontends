@@ -28,6 +28,10 @@ module.exports = (webpackConfigEnv, argv) => {
         __dirname,
         "src/aiComponents/AnomalyDetection/index.tsx"
       ),
+      aiComponents_PredictiveMaintenance: path.resolve(
+        __dirname,
+        "src/aiComponents/PredictiveMaintenance/index.tsx"
+      ),
     },
     externals: [
       "@clearblade/ia-mfe-core",

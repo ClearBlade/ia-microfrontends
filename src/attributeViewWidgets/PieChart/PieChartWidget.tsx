@@ -31,6 +31,10 @@ export default function PieChartWidget(props: {
     return <Typography variant="body2">{"Invalid data"}</Typography>;
   }
 
+  if (typeof data === "string") {
+    return <Typography variant="body2">{data}</Typography>;
+  }
+
   return <Widget data={data} />;
 }
 

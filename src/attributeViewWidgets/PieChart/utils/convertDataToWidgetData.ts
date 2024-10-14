@@ -24,6 +24,6 @@ export const convertDataToWidgetData = (attribute: string) => {
       color: PieChartPallette[idx].color
     }));
   } catch (e) {
-    return [];
+    return attribute;
   }
 }

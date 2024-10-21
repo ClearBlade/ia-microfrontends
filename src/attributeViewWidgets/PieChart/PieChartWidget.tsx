@@ -15,7 +15,7 @@ export default function PieChartWidget(props: {
   if (attribute === "Text") {
     // This if for the view widget in asset type attribute preview
     return (
-      <Widget
+      <CbPieChart
         data={[
           { title: "Attribute 1", value: 10, color: "#E38627" },
           { title: "Attribute 2", value: 20, color: "#C13C37" },
@@ -24,7 +24,7 @@ export default function PieChartWidget(props: {
       />
     );
   }
-  console.log("attribute: ", attribute);
+
   const data = convertDataToWidgetData(attribute);
 
   if (data.length === 0) {
@@ -35,10 +35,10 @@ export default function PieChartWidget(props: {
     return <Typography variant="body2">{data}</Typography>;
   }
 
-  return <Widget data={data} />;
+  return <CbPieChart data={data} />;
 }
 
-function Widget(props: { data: PieChartProps["data"] }) {
+function CbPieChart(props: { data: PieChartProps["data"] }) {
   const { data } = props;
   return (
     <Grid container item xs={12} justify-content>

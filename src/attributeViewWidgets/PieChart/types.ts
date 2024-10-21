@@ -8,9 +8,9 @@ export type PieChartViewSettings = {
 
 
 export const PieChartPallette = {
-  0: { color: "#2D87BB" },
-  1: { color: "#64C2A6" },
-  2: { color: "#E6F69D" },
+  0: { color: "#E38627" },
+  1: { color: "#C13C37" },
+  2: { color: "#6A2135" },
   3: { color: "#F66D44" },
   4: { color: "#AADEA7" },
   5: { color: "#FEAE65" },

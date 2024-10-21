@@ -12,9 +12,6 @@ const isValidDataType = (data: Record<string, any>) => {
 export const convertDataToWidgetData = (attribute: string) => {
   try {
     const data = JSON.parse(attribute);
-    // const jsonAttr: Record<string, any> = JSON.parse(attribute);
-    // const val = Object.values(jsonAttr)[0];
-    // const data = JSON.parse(JSON.parse(val));
     if (!isValidDataType(data)) {
       return [];
     }

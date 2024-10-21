@@ -21,6 +21,7 @@ export default function InternalComponents(
 ) {
   const { schema, component, assetTypeName, setValues } = props;
   const frequencyOptions = [
+    "Never",
     "Weekly",
     "Twice a Month",
     "Monthly",
@@ -47,8 +48,7 @@ export default function InternalComponents(
         schema: schema.filter((attribute) => attribute.selected),
         componentsMeta: {
           data_threshold: component.meta["data_threshold"] ?? 100000,
-          run_frequency_unix_cron:
-            component.meta["run_frequency_unix_cron"] ?? "Weekly",
+          run_frequency: component.meta["run_frequency"] ?? "Never",
         },
       }}
       onSubmit={() => {}}
@@ -164,12 +164,12 @@ export default function InternalComponents(
                     select
                     fullWidth
                     size="small"
-                    value={values.componentsMeta.run_frequency_unix_cron}
-                    name="componentsMeta.run_frequency_unix_cron"
-                    id="componentsMeta.run_frequency_unix_cron"
+                    value={values.componentsMeta.run_frequency}
+                    name="componentsMeta.run_frequency"
+                    id="componentsMeta.run_frequency"
                     component={TextField}
                     onChange={(e) => {
-                      e.target.name = "componentsMeta.run_frequency_unix_cron";
+                      e.target.name = "componentsMeta.run_frequency";
                       handleChange(e);
                     }}
                     variant="outlined"

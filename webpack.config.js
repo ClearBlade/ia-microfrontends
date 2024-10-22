@@ -24,6 +24,10 @@ module.exports = (webpackConfigEnv, argv) => {
         __dirname,
         "src/attributeViewWidgets/TrackStatus/index.tsx"
       ),
+      attributeViewWidgets_PieChart: path.resolve(
+        __dirname,
+        "src/attributeViewWidgets/PieChart/index.tsx"
+      ),
     },
     externals: [
       "@clearblade/ia-mfe-core",

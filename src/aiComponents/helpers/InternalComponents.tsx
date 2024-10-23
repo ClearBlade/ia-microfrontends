@@ -1,4 +1,5 @@
 import {
+  CircularProgress,
   Divider,
   FormControl,
   FormLabel,
@@ -15,6 +16,7 @@ import { Field, Form, Formik } from "formik";
 import { useEffect, useState } from "react";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import GenerateEntityInformation from "../helpers/GenerateEntityInformation";
+import { useSettings } from "./hooks/useSettings";
 
 export default function InternalComponents(
   props: AiComponentsProps & { children?: React.ReactNode }
@@ -27,20 +29,21 @@ export default function InternalComponents(
     "Monthly",
     "Every Other Month",
   ];
-  const [settings, setSettings] = useState({});
+  const {
+    data: settings,
+    isLoading,
+    isFetching,
+    isError,
+    error,
+  } = useSettings(component.id);
 
-  useEffect(() => {
-    const loadSettings = async () => {
-      try {
-        const componentPath = component.id.split("_")[1];
-        const settings = await import(`../${componentPath}/settings.json`);
-        setSettings(settings);
-      } catch (error) {
-        console.error("Error loading settings: ", error);
-      }
-    };
-    loadSettings();
-  }, [component]);
+  if (isLoading || isFetching) {
+    return <CircularProgress />;
+  }
+
+  if (isError) {
+    console.error(error);
+  }
 
   return (
     <Formik
@@ -184,7 +187,7 @@ export default function InternalComponents(
               </Grid>
               {props.children}
               <Grid item xs={12}>
-                {values.schema.length > 0 && (
+                {values.schema.length > 0 && settings && (
                   <GenerateEntityInformation
                     settings={settings}
                     componentLabel={component.name}

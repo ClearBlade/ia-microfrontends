@@ -7,7 +7,7 @@ Custom components for asset types. To add a new component follow these steps -
   - `assetTypeName`: Asset Type on which this component is being configured
   - `setValues`: Setter function to store data in IA
 - Additionally, your component folder can have a settings.json file of type settings.d.ts (NOT YET UPDATED TO THE LATEST. See settings.json from Anomaly Detection for reference.) from root folder. You can specify IA entities you want to create when this component is configured in IA.
-- If you component is an ClearBlade Internal Component, you can use <InternalComponents> component from the helpers folder and you can add your own custom fields if needed. Refer the following example for adding new fields - 
+- If you component is an ClearBlade Internal Component, you can use `<InternalComponents>` component from the helpers folder and you can add your own custom fields if needed. Refer the following example for adding new fields - 
 
 ```jsx
 export default function MyNewComponent(props: AiComponentsProps) {
@@ -55,4 +55,4 @@ export default function MyNewComponent(props: AiComponentsProps) {
   </InternalComponents>);
 }
 ```
-- If you component is an External Component, you can use <ExternalComponents> component from the helpers folder and you can add your own custom fields if needed in the same way as mentioned above.
+- If you component is an External Component, you can use `<ExternalComponents>` component from the helpers folder and you can add your own custom fields if needed in the same way as mentioned above.

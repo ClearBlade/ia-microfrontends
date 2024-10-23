@@ -7,7 +7,7 @@
     },
     {
       "attribute_name": "anomaly_breakdown",
-      "attribute_type": "string",
+      "attribute_type": "text",
       "attribute_label": "Anomaly Breakdown"
     }
   ],

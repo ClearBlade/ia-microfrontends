@@ -95,9 +95,10 @@ export default function InternalComponents(
                     getOptionSelected={(option, value) =>
                       option.uuid === value.uuid
                     }
-                    getOptionLabel={(option: { attribute_label: string }) =>
-                      option.attribute_label
-                    }
+                    getOptionLabel={(option: {
+                      attribute_label: string;
+                      attribute_name: string;
+                    }) => option.attribute_label || option.attribute_name}
                     renderInput={(params) => (
                       <TextField {...params} variant="outlined" />
                     )}

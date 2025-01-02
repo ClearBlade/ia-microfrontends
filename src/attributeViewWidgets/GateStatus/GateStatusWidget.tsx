@@ -1,5 +1,5 @@
 import { StateObservable, useStateObservable } from "@react-rxjs/core";
-import { Area, Asset } from "@clearblade/ia-mfe-core";
+import { Asset } from "@clearblade/ia-mfe-core";
 import { Grid } from "@material-ui/core";
 import { GateStatusCustomViewSettings } from "./types";
 import { getColorForGateStatusAttributeValue } from "./utils/getColorForGateStatusAttributeValue";
@@ -7,7 +7,7 @@ import { getColorForGateStatusAttributeValue } from "./utils/getColorForGateStat
 export default function GateStatusWidget(props: {
   settings: GateStatusCustomViewSettings;
   attribute: StateObservable<string | number | boolean | null | undefined>;
-  entity: StateObservable<Asset["frontend"] | Area["frontend"] | undefined>;
+  entity: StateObservable<Asset["frontend"] | undefined>;
 }) {
   const entity = useStateObservable(props.entity);
   const { gateUp, gateDown, bellStatus, gateControl, flip } = props.settings;

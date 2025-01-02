@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkia_microfrontends=self.webpackChunkia_microfrontends||[]).push([[596],{596:e=>{e.exports=JSON.parse('{"attributes":[{"attribute_name":"predictive_maintenance_probability","attribute_type":"number","attribute_label":"Predictive Maintenance Probability (%)"}]}')}}]);

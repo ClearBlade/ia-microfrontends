@@ -4,7 +4,7 @@ import {
   useStateObservable,
 } from "@react-rxjs/core";
 import { TrackStatusCustomViewSettings } from "./types";
-import { Area, Asset } from "@clearblade/ia-mfe-core";
+import { Asset } from "@clearblade/ia-mfe-core";
 import { AppProviders } from "@clearblade/ia-mfe-react";
 import { trackStatusDefaultAttributeColor } from "./constants";
 import { getColorForTrackStatusAttributeValue } from "./utils/getColorForTrackStatusAttributeValue";
@@ -12,7 +12,7 @@ import { getColorForTrackStatusAttributeValue } from "./utils/getColorForTrackSt
 export default function TrackStatusWidget(props: {
   settings: TrackStatusCustomViewSettings;
   attribute: StateObservable<string | number | boolean | null | undefined>;
-  entity: StateObservable<Asset["frontend"] | Area["frontend"] | undefined>;
+  entity: StateObservable<Asset["frontend"] | undefined>;
 }) {
   const entity = useStateObservable(props.entity);
 

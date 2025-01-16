@@ -1,18 +1,18 @@
+import { MfeAssetForAttributeWidgets } from "@clearblade/ia-mfe-core";
+import { AppProviders } from "@clearblade/ia-mfe-react";
 import {
   StateObservable,
   Subscribe,
   useStateObservable,
 } from "@react-rxjs/core";
-import { TrackStatusCustomViewSettings } from "./types";
-import { Asset } from "@clearblade/ia-mfe-core";
-import { AppProviders } from "@clearblade/ia-mfe-react";
 import { trackStatusDefaultAttributeColor } from "./constants";
+import { TrackStatusCustomViewSettings } from "./types";
 import { getColorForTrackStatusAttributeValue } from "./utils/getColorForTrackStatusAttributeValue";
 
 export default function TrackStatusWidget(props: {
   settings: TrackStatusCustomViewSettings;
   attribute: StateObservable<string | number | boolean | null | undefined>;
-  entity: StateObservable<Asset["frontend"] | undefined>;
+  entity: StateObservable<MfeAssetForAttributeWidgets | undefined>;
 }) {
   const entity = useStateObservable(props.entity);
 

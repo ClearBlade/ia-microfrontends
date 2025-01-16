@@ -1,11 +1,11 @@
-import { AppProviders } from "@clearblade/ia-mfe-react";
 import { getBasePath } from "@clearblade/ia-mfe-core";
+import { AppProviders } from "@clearblade/ia-mfe-react";
 import { Subscribe } from "@react-rxjs/core";
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import singleSpaReact from "single-spa-react";
 import TrackStatusWidget from "./TrackStatusWidget";
-import { BrowserRouter } from "react-router-dom";
 
 function TrackStatusRoot(props) {
   return (

@@ -89,6 +89,6 @@ The following json should be used as a sample for the __custom_view_settings__ a
         }
       }
     },
-  ```json
+  ```
 
-  The value of the __attribute__ attribute in each of the key items under __custom_view_settings__ must be the name of a custom_data attribute defined in the _asset_type_.
+The value of the __attribute__ attribute in each of the key items under __custom_view_settings__ must be the name of a custom_data attribute defined in the _asset_type_.

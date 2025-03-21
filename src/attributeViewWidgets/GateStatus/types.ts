@@ -4,6 +4,7 @@ export enum GateStatusSettingKeys {
   gateControl = "gateControl",
   bellStatus = "bellStatus",
   flip = "flip",
+  enabled = "enabled",
 }
 
 export type GateStatusAttributeProp = {
@@ -14,10 +15,15 @@ export type GateStatusAttributeProp = {
   };
 };
 
+export type GateEnabledAttributeProp = {
+  attribute: string;
+};
+
 export type GateStatusCustomViewSettings = {
   [GateStatusSettingKeys.gateUp]: GateStatusAttributeProp;
   [GateStatusSettingKeys.gateDown]: GateStatusAttributeProp;
   [GateStatusSettingKeys.gateControl]: GateStatusAttributeProp;
   [GateStatusSettingKeys.bellStatus]: GateStatusAttributeProp;
   [GateStatusSettingKeys.flip]: Boolean;
+  [GateStatusSettingKeys.enabled]: GateEnabledAttributeProp;
 };

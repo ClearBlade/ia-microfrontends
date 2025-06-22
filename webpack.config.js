@@ -28,6 +28,10 @@ module.exports = (webpackConfigEnv, argv) => {
         __dirname,
         "src/attributeViewWidgets/PieChart/index.tsx"
       ),
+      dashboards_MqttSubscriptionDashboard: path.resolve(
+        __dirname,
+        "src/dashboards/MqttSubscriptionDashboard/index.tsx"
+      ),
     },
     externals: [
       "@clearblade/ia-mfe-core",

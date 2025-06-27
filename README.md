@@ -31,7 +31,7 @@ Each directory in the root/src of this repository represents a category of mfes,
 3. Local development:
    - Make sure to `npm install` from the root of the repository before beginning.
    - `npm run start` from the root the repository. This will run all entry points in the webpack.config.js.
-   - You should be able to point to your individual mfe entry point url with this format: `http://localhost:8081/attributeViewWidgets_GateStatus.js`. The port `8081` will vary depending on which port your local server is running on.
+   - You should be able to point to your individual mfe entry point url from the Intelligent Assets insertion point with this format: `http://localhost:8081/attributeViewWidgets_GateStatus.js`. The port `8081` will vary depending on which port your local server is running on.
    - Develop the UI you would like to render.
 4. Publishing for production:
    - `npm run build:webpack` from the root of the repository. This will create a dist folder of built code.

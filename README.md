@@ -29,6 +29,7 @@ Each directory in the root/src of this repository represents a category of mfes,
 1. Create a new directory within the category directory (e.g. src/attributeViewWidgets/GateStatus/)
 2. Add a new entry point to the webpack.config.js, pointing to your entry file. Please follow the naming convention for your webpack entry point of `<CategoryName>_<YourMfeName>`. See other entry files regarding usage of `singleSpaReact` to understand how to set up your file.
 3. Local development:
+   - Make sure to `npm install` from the root of the repository before beginning.
    - `npm run start` from the root the repository. This will run all entry points in the webpack.config.js.
    - You should be able to point to your individual mfe entry point url with this format: `http://localhost:8081/attributeViewWidgets_GateStatus.js`.
    - Develop the UI you would like to render.

@@ -41,4 +41,4 @@ Each directory in the root/src of this repository represents a category of mfes,
 
 ### Additional documentation
 
-- For additional documentation and tips on developing your mfe see [here] (https://docs.clearblade.com/ia/microfrontend-types-and-props)
+- For additional documentation and tips on developing your mfe see [here] ([https://docs.clearblade.com/ia/microfrontend-types-and-props](https://docs.clearblade.com/ia/developing-microfrontends))
